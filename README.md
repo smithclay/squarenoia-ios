@@ -1,5 +1,9 @@
 # squareanoia #
 
+View and receive alerts on San Francisco crime nearby.
+
+![screenshot](https://cloud.githubusercontent.com/assets/27153/9181563/747ea686-3f5a-11e5-9c29-12ce6ba73876.png)
+
 ## Setup ##
 
 Run `bin/setup`
