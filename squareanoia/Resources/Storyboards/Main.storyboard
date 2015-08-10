@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-Ok-kRR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nearby Crime-->
+        <scene sceneID="V24-Tp-x8o">
+            <objects>
+                <viewController id="EOT-Bg-3Tz" customClass="MapViewController" customModule="squareanoia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aY-Xe-XDf"/>
+                        <viewControllerLayoutGuide type="bottom" id="JeM-bf-afD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iQu-GN-lJH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzB-bf-Okz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JeM-bf-afD" firstAttribute="top" secondItem="LzB-bf-Okz" secondAttribute="bottom" id="26C-yG-nSP"/>
+                            <constraint firstItem="LzB-bf-Okz" firstAttribute="top" secondItem="8aY-Xe-XDf" secondAttribute="bottom" constant="-20" id="7Nk-DD-HBW"/>
+                            <constraint firstItem="LzB-bf-Okz" firstAttribute="leading" secondItem="iQu-GN-lJH" secondAttribute="leadingMargin" constant="-16" id="Y2O-v8-iXL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LzB-bf-Okz" secondAttribute="trailing" constant="-16" id="Zxs-lb-YtX"/>
+                            <constraint firstItem="JeM-bf-afD" firstAttribute="top" secondItem="LzB-bf-Okz" secondAttribute="bottom" id="d5N-C8-P5q"/>
+                            <constraint firstItem="LzB-bf-Okz" firstAttribute="top" secondItem="8aY-Xe-XDf" secondAttribute="bottom" constant="-20" id="yT0-GQ-Kh9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Nearby Crime" image="handcuffs.png" id="CnH-mt-5ZO">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="mapView" destination="LzB-bf-Okz" id="MvV-3Z-HvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gt5-2w-bxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="362"/>
+        </scene>
+        <!--DangerZone-->
+        <scene sceneID="VHU-09-4k9">
+            <objects>
+                <viewController id="QXn-q1-dpX" customClass="DangerZoneController" customModule="squareanoia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kbh-GY-kYc"/>
+                        <viewControllerLayoutGuide type="bottom" id="UeY-9B-Hsn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oPC-Ld-v2P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkQ-gF-fUH">
+                                <rect key="frame" x="280" y="232" width="40" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="E6Q-Sp-cHX">
+                                        <variation key="widthClass=compact" constant="92"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="72"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E6Q-Sp-cHX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="E6Q-Sp-cHX"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recent violent crimes nearby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaI-Dd-B7b">
+                                <rect key="frame" x="191" y="321" width="216.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DangerZoneHeader.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8uo-63-xQA">
+                                <rect key="frame" x="150" y="20" width="300" height="146.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="UkQ-gF-fUH" secondAttribute="centerX" id="2N2-1Q-BiV"/>
+                            <constraint firstAttribute="centerY" secondItem="KaI-Dd-B7b" secondAttribute="centerY" constant="-56" id="822-pI-idl">
+                                <variation key="widthClass=compact" constant="-57"/>
+                            </constraint>
+                            <constraint firstItem="UkQ-gF-fUH" firstAttribute="top" secondItem="8uo-63-xQA" secondAttribute="bottom" constant="66" id="Een-aJ-l68"/>
+                            <constraint firstItem="KaI-Dd-B7b" firstAttribute="top" secondItem="UkQ-gF-fUH" secondAttribute="bottom" constant="2.5" id="HUK-lr-pbt"/>
+                            <constraint firstAttribute="centerY" secondItem="UkQ-gF-fUH" secondAttribute="centerY" id="Lyp-LV-xUg"/>
+                            <constraint firstItem="UkQ-gF-fUH" firstAttribute="centerX" secondItem="KaI-Dd-B7b" secondAttribute="centerX" constant="0.25" id="POc-Ii-Q6K"/>
+                            <constraint firstAttribute="centerX" secondItem="8uo-63-xQA" secondAttribute="centerX" constant="-0.5" id="Z3A-Rw-TSL"/>
+                            <constraint firstItem="8uo-63-xQA" firstAttribute="top" secondItem="kbh-GY-kYc" secondAttribute="bottom" id="tMj-cz-3Vx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="DangerZone" image="DangerZone.png" id="wzr-uR-Sf1">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="crimeCountLabel" destination="UkQ-gF-fUH" id="fBR-9c-DTL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XiB-r2-s2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="1132"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="PnL-5O-inb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZJW-Ok-kRR" customClass="MainTabBarController" customModule="squareanoia" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="8p7-LU-mg5">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EOT-Bg-3Tz" kind="relationship" relationship="viewControllers" id="SF4-Nh-eT2"/>
+                        <segue destination="QXn-q1-dpX" kind="relationship" relationship="viewControllers" id="08C-42-wpP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pYO-RE-0LO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="362"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DangerZone.png" width="30" height="30"/>
+        <image name="DangerZoneHeader.jpg" width="300" height="300"/>
+        <image name="handcuffs.png" width="30" height="30"/>
+    </resources>
+</document>
